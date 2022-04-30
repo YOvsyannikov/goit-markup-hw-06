@@ -221,6 +221,9 @@ background-color: var(--accent-text-color);
 .modal-btn-close:hover,
 .modal-btn-close:focus{
   fill: var(--accent-text-color);
+  transition-duration: 250ms;
+  transition-property: fill;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form{
   margin-left: auto;
@@ -270,6 +273,7 @@ padding-bottom: 12px;
   border-radius: 4px;
   background-color: transparent;
   padding-left: 16px;
+  outline: none;
 }
 .icon-modal{
   position: absolute;
@@ -282,11 +286,17 @@ padding-bottom: 12px;
   
 }
 .form-input:focus{
-  border: 1px solid #2196F3;
+  border: 1px solid var(--accent-text-color);
   border-radius: 4px;
+  transition-duration: 250ms;
+  transition-property: border;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-input:focus + .icon-modal{
   fill: var(--accent-text-color);
+  transition-duration: 250ms;
+  transition-property: fill;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-label{
   display: block;
@@ -297,6 +307,7 @@ padding-bottom: 12px;
   
   color: var(--paragraph-text-color);
   margin-bottom: 4px;
+  outline: none;
 }
 .form-textarea{
   width: 100%;
@@ -310,6 +321,14 @@ padding-bottom: 12px;
 }
 .checkbox{
   margin-top: 20px;
+}
+.checkbox-label span{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  
+  color: var(--paragraph-text-color);
 }
 .agreement{
   font-weight: 400;
@@ -332,12 +351,11 @@ padding-bottom: 12px;
   font-size: 16px;
   line-height: 1.87;
   
-  align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
 
   color: var(--white-text-color);
-  background: #2196F3;
+  background-color: #2196F3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: 0;
@@ -345,8 +363,10 @@ padding-bottom: 12px;
 }
 .btn-send-modal:hover{
   background: #188CE8;
-  border-radius: 4px;
   cursor: pointer;
+  transition-duration: 250ms;
+  transition-property: background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ---------END of BACKDROP AND MODAL FORM-------- */
