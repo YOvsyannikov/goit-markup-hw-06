@@ -237,14 +237,17 @@ text-align: center;
 letter-spacing: 0.03em;
 
 color: var(--title-text-color);
-padding-bottom: 12px;
+margin-bottom: 12px;
 }
 .form-field {
   display: flex;
   flex-direction: column;
 }
-.form-field:not(:last-child){
+.form-field-spaceF{
   margin-bottom: 12px;
+}
+.form-field-spaceL{
+  margin-bottom: 20px;
 }
 .form-textarea{
   font-weight: 400;
@@ -285,11 +288,12 @@ padding-bottom: 12px;
   
 }
 .form-input:hover,
-.form-input:focus{
+.form-input:focus,
+.form-textarea:hover,
+.form-textarea:focus {
   border: 1px solid var(--accent-text-color);
-  border-radius: 4px;
   transition-duration: 250ms;
-  transition-property: fill;
+  transition-property:border-color ;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 }
@@ -762,6 +766,9 @@ display:flex;
 .footer-content{
   display: flex;
   align-items: baseline;
+}
+.footer-box{
+  flex-grow: 1;
 }
 .footer-logo {
   display: block;
